@@ -44,6 +44,14 @@ class ViewController: UIViewController {
         CleverTap.sharedInstance()?.profilePush(["Identity" : "22161096", "Email" : "dk+girisonje@clevertap.com", "Phone Number" : "22161096"])
         
         CleverTap.sharedInstance()?.recordEvent("Product Viewed", withProps: ["Product ID" : 1, "Product Name" : "CleverTap", "Product Image" : "https://d35fo82fjcw0y8.cloudfront.net/2018/07/26020307/customer-success-clevertap.jpg"])
+        
+        let alertController = UIAlertController(title: "Data Pushed", message: "Profile and event pushed to clever tap successfully.", preferredStyle: .alert)
+        
+        let cancelActionButton = UIAlertAction(title: "OK", style: .cancel) { _ in
+        }
+        alertController.addAction(cancelActionButton)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
